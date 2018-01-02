@@ -1248,7 +1248,7 @@ CLOCKLIBS=""
 cat > $TMPC <<EOF
 #include <signal.h>
 #include <time.h>
-int main(void) { struct itimerspec v; timer_t t; return timer_gettime (t, &v); }
+int main(void) { clockid_t id; return clock_gettime(id, NULL); }
 EOF
 
 rt=no

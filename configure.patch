@@ -1,0 +1,11 @@
+--- configure.orig	2013-06-13 10:56:41.516276000 +0100
++++ configure	2013-06-13 11:20:26.010368566 +0100
+@@ -1362,7 +1362,7 @@
+ cat > $TMPC <<EOF
+ #include <signal.h>
+ #include <time.h>
+-int main(void) { clockid_t id; return clock_gettime(id, NULL); }
++int main(void) { struct itimerspec v; timer_t t; return timer_gettime (t, &v); }
+ EOF
+ 
+ rt=no

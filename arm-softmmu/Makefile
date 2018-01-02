@@ -1,0 +1,1 @@
+/root/mini2440_qemu/qemu/Makefile.target
